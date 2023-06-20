@@ -513,7 +513,7 @@ function custommailing_crontask() {
             $attachment->file = '';
             $attachment->filename = '';
         }
-        $log->mailingcontent = str_replace(['%firstname%', '%lastname%'], [$log->firstname, $log->lastname], $log->mailingcontent);
+        $log->mailingcontent = str_replace(['%firstname%', '%lastname%', '%email%'], [$log->firstname, $log->lastname, $log->email], $log->mailingcontent);
         if (email_to_user($log, core_user::get_support_user(), $log->mailingsubject, strip_tags($log->mailingcontent), $log->mailingcontent, $attachment->file, $attachment->filename)) {
             $ids_to_update[] = $log->logid;
         }
