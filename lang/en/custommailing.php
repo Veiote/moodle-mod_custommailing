@@ -61,6 +61,7 @@ $string['mailingcontent_help'] = 'You can use the following variables in the mai
 <ul>
 <li>%firstname%</li>
 <li>%lastname%</li>
+<li>%email%</li>
 </ul>';
 $string['mailingdeleted'] = 'Mailing deleted';
 $string['mailinglang'] = 'Lang';
